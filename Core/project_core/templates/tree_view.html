@@ -1,0 +1,102 @@
+
+<div id="tree-container">
+    {% for node in subgraphs %}
+    <div class="node">
+        <p class="node-name" root="true" data-node-id="{{ node.id }}"><span class="caret"></span> {{ node.id }}</p>
+        <div class="node-children" style="display:none;">
+            <ul>
+                {% for key, value in node.attributes.items %}
+                    <li><p>- {{ key }}: {{ value }}</p></li>
+                {% endfor %}
+                {% for child in node.children %}
+                    <li>
+                        <div class="node">
+                            <p class="node-name" data-node-id="{{ child }}"><span class="caret"></span> {{ child }}</p>
+                            <div class="node-children" style="display:none;">
+                            </div>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+<script>
+    
+    $(document).ready(function() {
+        $(".node-name").click(function() {
+            displayNode($(this));
+        });
+    });
+
+    function displayNode(chosen) {
+            let self = chosen;
+            $(chosen).find(".caret").toggleClass("caret-down");
+            $(chosen).siblings(".node-children").toggle();
+
+            // root nodes are already loaded
+            if ($(chosen).attr("root") == "true")
+            return;
+
+            id = $(chosen).attr("data-node-id");
+
+            // no need to load already loaded nodes
+            if ($(chosen).siblings(".node-children").children().length)
+                return;
+
+            $.ajax({
+                type: 'GET',
+                url: '/getTreeNode/' + id,
+                dataType: 'json',
+                success: function (data) {
+                    selectedNode = data;
+                    console.log(data);
+                    let ul = document.createElement("ul");
+
+                    Object.entries(data.attributes).forEach(([key, value]) => {
+                        let attrLi = document.createElement("li");
+                        let attrP = document.createElement("p");
+                        attrP.innerText = "- " + key + ": " + value;
+                        attrLi.appendChild(attrP);
+                        ul.appendChild(attrLi);
+                    });
+                    
+                    selectedNode.children.forEach((childNodeId) => {
+                        console.log(childNodeId);
+                        let p = document.createElement("p");
+
+                        let caretSpan = document.createElement("span");
+                        caretSpan.classList.add("caret");
+                        p.appendChild(caretSpan);
+
+                        p.appendChild(document.createTextNode(" " + childNodeId));
+                        p.classList.add("node-name");                    
+                        p.setAttribute('data-node-id', childNodeId);
+
+                        let childrenn = document.createElement('div');
+                        childrenn.setAttribute('style', "display:none;");
+                        childrenn.classList.add('node-children');
+
+                        let childDiv = document.createElement("div");
+                        childDiv.appendChild(p);
+                        childDiv.appendChild(childrenn);
+
+                        let childLi = document.createElement("li");
+                        childLi.appendChild(childDiv);
+                        ul.appendChild(childLi)
+
+                        let pRef = $(p);
+                        pRef.click(() => {
+                            displayNode(pRef);
+                        });
+                        
+                    })
+                    $(self).siblings(".node-children").empty();
+                    $(self).siblings(".node-children").append(ul);
+
+                }
+            });
+    }
+</script>

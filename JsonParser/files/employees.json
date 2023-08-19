@@ -1,0 +1,500 @@
+{
+    "employees": [
+        {
+            "firstName": "John",
+            "lastName": "Doe",
+            "age": 30,
+            "address": {
+                "streetAddress": "123 Main St",
+                "city": "Anytown",
+                "state": "CA",
+                "zip": "12345"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "555-555-5555"
+                },
+                {
+                    "type": "work",
+                    "number": "555-555-5555"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Jane",
+                    "age": 5
+                },
+                {
+                    "firstName": "Jim",
+                    "age": 3
+                }
+            ]
+        },
+        {
+            "firstName": "Jane",
+            "lastName": "Smith",
+            "age": 35,
+            "address": {
+                "streetAddress": "456 Elm St",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "555-555-5555"
+                },
+                {
+                    "type": "work",
+                    "number": "555-555-5555"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Jessica",
+                    "age": 8
+                },
+                {
+                    "firstName": "Jack",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Mirko",
+            "lastName": "Cro Cop",
+            "age": 35,
+            "address": {
+                "streetAddress": "457 Elm St",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "545-555-5555"
+                },
+                {
+                    "type": "work",
+                    "number": "523-555-5555"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Mara",
+                    "age": 8
+                },
+                {
+                    "firstName": "Jara",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Stipe",
+            "lastName": "Savic",
+            "age": 43,
+            "address": {
+                "streetAddress": "222 Elm St",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "545-535-5555"
+                },
+                {
+                    "type": "work",
+                    "number": "523-521-5555"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Nidza",
+                    "age": 8
+                },
+                {
+                    "firstName": "Sena",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Daniel",
+            "lastName": "Cormier",
+            "age": 45,
+            "address": {
+                "streetAddress": "222 Javorinska St",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "545-535-12321"
+                },
+                {
+                    "type": "work",
+                    "number": "523-521-433"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Rodri",
+                    "age": 8
+                },
+                {
+                    "firstName": "Kudzo",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Daniel",
+            "lastName": "Milic",
+            "age": 45,
+            "address": {
+                "streetAddress": "222 Javorinska Streat",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "245-535-12321"
+                },
+                {
+                    "type": "work",
+                    "number": "223-521-433"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Lejla",
+                    "age": 8
+                },
+                {
+                    "firstName": "Hari Mata hari",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Nikoala",
+            "lastName": "Savic",
+            "age": 22,
+            "address": {
+                "streetAddress": "1111 Javorinska Streat",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "222-535-12321"
+                },
+                {
+                    "type": "work",
+                    "number": "222-521-433"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Savke",
+                    "age": 8
+                },
+                {
+                    "firstName": "Dzoni",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Milenko",
+            "lastName": "Vic",
+            "age": 20,
+            "address": {
+                "streetAddress": "2211 Javorinska Streat",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "22123-535-12321"
+                },
+                {
+                    "type": "work",
+                    "number": "222123-521-433"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Dreqe",
+                    "age": 8
+                },
+                {
+                    "firstName": "Kalisi",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Milenko",
+            "lastName": "Vicevic",
+            "age": 20,
+            "address": {
+                "streetAddress": "2211 Javorinska Streat",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "22123-535-12321"
+                },
+                {
+                    "type": "work",
+                    "number": "222123-521-433"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Rada",
+                    "age": 8
+                },
+                {
+                    "firstName": "manojlovic",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Svirela",
+            "lastName": "Kis",
+            "age": 20,
+            "address": {
+                "streetAddress": "2211 Javorinska Streat",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "213-535-12321"
+                },
+                {
+                    "type": "work",
+                    "number": "222123-521-433"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Qaaa",
+                    "age": 8
+                },
+                {
+                    "firstName": "Dana",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Svirela",
+            "lastName": "Kekic",
+            "age": 20,
+            "address": {
+                "streetAddress": "1123 Javorinska Streat",
+                "city": "Anytown",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "213-546-12321"
+                },
+                {
+                    "type": "work",
+                    "number": "222123-766-433"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Rada",
+                    "age": 8
+                },
+                {
+                    "firstName": "Mada",
+                    "age": 6
+                }
+            ]
+        },
+        {
+            "firstName": "Ranko",
+            "lastName": "Babic",
+            "age": 40,
+            "address": {
+                "streetAddress": "1123 Lacarak Srbija",
+                "city": "HHHH",
+                "state": "NY",
+                "zip": "67890"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "213-546-9879"
+                },
+                {
+                    "type": "work",
+                    "number": "222123-766-6766"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Larija",
+                    "age": 12
+                },
+                {
+                    "firstName": "Mada",
+                    "age": 3
+                }
+            ]
+        },
+        {
+            "firstName": "Stipe",
+            "lastName": "Kuzmic",
+            "age": 70,
+            "address": {
+                "streetAddress": "1123 Lacarak Srbija",
+                "city": "HHHH",
+                "state": "NY",
+                "zip": "2222221"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "211233-546-9879"
+                },
+                {
+                    "type": "work",
+                    "number": "124867-766-6766"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Larija",
+                    "age": 21
+                },
+                {
+                    "firstName": "Mada",
+                    "age": 24
+                }
+            ]
+        },
+        {
+            "firstName": "Marica",
+            "lastName": "Milosevic",
+            "age": 70,
+            "address": {
+                "streetAddress": "1123 Lacarak Srbija",
+                "city": "Sremska Mitrovica",
+                "state": "NY",
+                "zip": "2222221"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "7685645"
+                },
+                {
+                    "type": "work",
+                    "number": "124124"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Dusko",
+                    "age": 42
+                },
+                {
+                    "firstName": "Dragan",
+                    "age": 44
+                }
+            ]
+        },
+        {
+            "firstName": "Dragica",
+            "lastName": "Andric",
+            "age": 50,
+            "address": {
+                "streetAddress": "1123 Lacarak Srbija",
+                "city": "Lacarak ",
+                "state": "NY",
+                "zip": "22221"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "888777"
+                },
+                {
+                    "type": "work",
+                    "number": "5553334"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Dusko",
+                    "age": 11
+                },
+                {
+                    "firstName": "Dragan",
+                    "age": 7
+                }
+            ]
+        },
+        {
+            "firstName": "Dragan",
+            "lastName": "Vuga",
+            "age": 50,
+            "address": {
+                "streetAddress": "Cerska 34",
+                "city": "Lacarak ",
+                "state": "Srbija",
+                "zip": "22221"
+            },
+            "phoneNumbers": [
+                {
+                    "type": "home",
+                    "number": "06912512421"
+                },
+                {
+                    "type": "work",
+                    "number": "0691245646"
+                }
+            ],
+            "children": [
+                {
+                    "firstName": "Nebojsa",
+                    "age": 21
+                },
+                {
+                    "firstName": "Milica",
+                    "age": 22
+                }
+            ]
+        }
+    ]
+}

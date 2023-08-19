@@ -1,0 +1,775 @@
+{
+	"totalCount": 13,
+	"results": [
+		{
+			"id": 2,
+			"user": {
+				"name": "Nemanja",
+				"surname": "Stefanovic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "nemus@gmail.com",
+				"address": "Radnicka 20, Novi Sad"
+			},
+			"ride": {
+				"id": 5,
+				"startTime": "2022-11-15T07:50:00.000+00:00",
+				"endTime": "2022-11-15T08:10:00.000+00:00",
+				"totalCost": 903.0,
+				"driver": {
+					"id": 1,
+					"email": "mirko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 9.0,
+				"vehicleType": "STANDARD",
+				"babyTransport": false,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cara Dušana Silnog 64, Veternik",
+							"latitude": 45.2607023,
+							"longitude": 19.7611797
+						},
+						"destination": {
+							"address": "Jevrejska 2, Novi Sad",
+							"latitude": 45.25409,
+							"longitude": 19.84176
+						}
+					}
+				]
+			},
+			"time": "2022-11-15T08:10:00.000+00:00",
+			"reason": "Rider went of course"
+		},
+		{
+			"id": 6,
+			"user": {
+				"name": "Marko",
+				"surname": "Kraljevic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "marko@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 10,
+				"startTime": "2023-01-29T20:17:44.973+00:00",
+				"endTime": "2023-01-29T20:18:15.120+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "marko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Lacarak",
+							"latitude": 44.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 2 Lacarak",
+							"latitude": 44.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.103+00:00",
+			"reason": "Upomoc, ubija me bbre"
+		},
+		{
+			"id": 8,
+			"user": {
+				"name": "Marko",
+				"surname": "Kraljevic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "marko@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 10,
+				"startTime": "2023-01-29T20:17:44.973+00:00",
+				"endTime": "2023-01-29T20:18:15.120+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "marko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Lacarak",
+							"latitude": 44.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 2 Lacarak",
+							"latitude": 44.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:18:03.812+00:00",
+			"reason": "Upomoc,ubice me aaaae"
+		},
+		{
+			"id": 1,
+			"user": {
+				"name": "Nemanja",
+				"surname": "Stefanovic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "nemus@gmail.com",
+				"address": "Radnicka 20, Novi Sad"
+			},
+			"ride": {
+				"id": 1,
+				"startTime": "2022-07-26T09:42:00.000+00:00",
+				"endTime": "2022-07-26T10:34:00.000+00:00",
+				"totalCost": 4042.0,
+				"driver": {
+					"id": 1,
+					"email": "mirko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					},
+					{
+						"id": 3,
+						"email": "nemus@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 48.0,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": false,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Radnicka 19, Novi Sad",
+							"latitude": 45.249101856630546,
+							"longitude": 19.848034
+						},
+						"destination": {
+							"address": "Cerska 34, Lacarak",
+							"latitude": 44.997668,
+							"longitude": 19.557723
+						}
+					}
+				]
+			},
+			"time": "2022-11-15T10:52:00.000+00:00",
+			"reason": "Rider went of course"
+		},
+		{
+			"id": 3,
+			"user": {
+				"name": "Marko",
+				"surname": "Kraljevic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "marko@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 8,
+				"startTime": "2023-01-29T20:14:47.048+00:00",
+				"endTime": "2023-01-29T20:15:37.096+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "marko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 34, Lacarak",
+							"latitude": 44.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 3 Lacarak",
+							"latitude": 44.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:15:01.833+00:00",
+			"reason": "Im tired baby"
+		},
+		{
+			"id": 9,
+			"user": {
+				"name": "Marko",
+				"surname": "Preradovic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "markopreradovic@gmail.com",
+				"address": "Kurtijeva 12, Novi Sad"
+			},
+			"ride": {
+				"id": 10,
+				"startTime": "2023-01-29T20:17:44.973+00:00",
+				"endTime": "2023-01-29T20:18:15.120+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "marko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Lacarak",
+							"latitude": 44.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 2 Lacarak",
+							"latitude": 44.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:18:15.128+00:00",
+			"reason": "Laze vozac"
+		},
+		{
+			"id": 5,
+			"user": {
+				"name": "Marko",
+				"surname": "Preradovic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "markopreradovic@gmail.com",
+				"address": "Kurtijeva 12, Novi Sad"
+			},
+			"ride": {
+				"id": 9,
+				"startTime": "2023-01-29T20:15:55.803+00:00",
+				"endTime": "2023-01-29T20:16:24.866+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "marko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 12, Lacarak",
+							"latitude": 44.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 14 Lacarak",
+							"latitude": 44.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:16:19.982+00:00",
+			"reason": "Help obi wan"
+		},
+		{
+			"id": 4,
+			"user": {
+				"name": "Marko",
+				"surname": "Kraljevic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "marko@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 8,
+				"startTime": "2023-01-29T20:14:47.048+00:00",
+				"endTime": "2023-01-29T20:15:37.096+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "marko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 34, Lacarak",
+							"latitude": 44.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 3 Lacarak",
+							"latitude": 44.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:15:10.899+00:00",
+			"reason": "Heeelep broooo"
+		},
+		{
+			"id": 7,
+			"user": {
+				"name": "Marko",
+				"surname": "Kraljevic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "marko@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 10,
+				"startTime": "2023-01-29T20:17:44.973+00:00",
+				"endTime": "2023-01-29T20:18:15.120+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "marko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Lacarak",
+							"latitude": 44.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 2 Lacarak",
+							"latitude": 44.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.864+00:00",
+			"reason": "Upomoc, ubija me bbre"
+		},
+		{
+			"id": 8,
+			"user": {
+				"name": "Mirko",
+				"surname": "Nenadic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "mirko@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 11,
+				"startTime": "2023-01-29T20:17:44.973+00:00",
+				"endTime": "2023-01-29T20:18:15.120+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "mirko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "nemus@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": "He was very bad",
+					"timeOfRejection": "2023-01-29T20:17:44.973+00:00"
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Novi Sad",
+							"latitude": 43.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 2 Beograd",
+							"latitude": 42.999058982066806,
+							"longitude": 19.57478375283158
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.864+00:00",
+			"reason": "Upomoc, ubija me bbre"
+		},
+		{
+			"id": 9,
+			"user": {
+				"name": "Mire",
+				"surname": "Nenadic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "mirko@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 12,
+				"startTime": "2023-01-29T20:17:44.973+00:00",
+				"endTime": "2023-01-29T20:18:15.120+00:00",
+				"totalCost": 134.33951202124396,
+				"driver": {
+					"id": 2,
+					"email": "mirkec@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 4,
+						"email": "nemkec@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": "He was very misbehaved",
+					"timeOfRejection": "2022-01-29T20:17:44.973+00:00"
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Novi Sad",
+							"latitude": 41.99920154316808,
+							"longitude": 19.56054659473074
+						},
+						"destination": {
+							"address": "Sremska 2 Beograd",
+							"latitude": 42.12421,
+							"longitude": 19.65464
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.864+00:00",
+			"reason": "Upomoc, ubija me bbre, ubija me!"
+		},
+		{
+			"id": 10,
+			"user": {
+				"name": "Ranko",
+				"surname": "Branko",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "rana@gmail.com",
+				"address": "Mirkova 14, Novi Sad"
+			},
+			"ride": {
+				"id": 12,
+				"startTime": "2022-01-29T20:17:44.973+00:00",
+				"endTime": "2022-01-29T20:18:15.120+00:00",
+				"totalCost": 2004.33951202124396,
+				"driver": {
+					"id": 1,
+					"email": "steva@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 6,
+						"email": "rasha@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.67924390026555,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": "Ma lik nije normalan",
+					"timeOfRejection": "2022-01-29T20:17:44.973+00:00"
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Novi Sad",
+							"latitude": 42.123,
+							"longitude": 19.666
+						},
+						"destination": {
+							"address": "Sremska 2 Beograd",
+							"latitude": 43.12421,
+							"longitude": 19.65464
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.864+00:00",
+			"reason": "Upomoc, ubija me bbre, ubija me!"
+		},
+		{
+			"id": 11,
+			"user": {
+				"name": "Ralija",
+				"surname": "Branko",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "ralija@gmail.com",
+				"address": "Cerska 14, Novi Sad"
+			},
+			"ride": {
+				"id": 13,
+				"startTime": "2022-01-29T20:17:44.973+00:00",
+				"endTime": "2022-01-29T20:18:15.120+00:00",
+				"totalCost": 554.33951202124396,
+				"driver": {
+					"id": 1,
+					"email": "ralija@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 123,
+						"email": "markoni@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.534,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": null,
+					"timeOfRejection": null
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Cerska 4, Novi Sad",
+							"latitude": 43.123,
+							"longitude": 12.666
+						},
+						"destination": {
+							"address": "Sremska 2 Beograd",
+							"latitude": 43.12421,
+							"longitude": 12.65464
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.864+00:00",
+			"reason": "Nepazljiv vozac"
+		},
+		{
+			"id": 13,
+			"user": {
+				"name": "StevaStevcic",
+				"surname": "Branko",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "StevaStevcic@gmail.com",
+				"address": "Cerska 14, Novi Sad"
+			},
+			"ride": {
+				"id": 22,
+				"startTime": "2022-01-29T20:17:44.973+00:00",
+				"endTime": "2022-01-29T20:18:15.120+00:00",
+				"totalCost": 554.33951202124396,
+				"driver": {
+					"id": 52,
+					"email": "stevica@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 122,
+						"email": "markokarto@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.534,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": "Cist bezobrazluk",
+					"timeOfRejection": "2022-01-29T20:17:44.973+00:00"
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Radnicka 3, Novi Sad",
+							"latitude": 43.123,
+							"longitude": 19.2444
+						},
+						"destination": {
+							"address": "Radnicka 19, Novi Sad",
+							"latitude": 43.8798,
+							"longitude": 12.65464
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.864+00:00",
+			"reason": "Nepazljiv vozac"
+		},
+		{
+			"id": 14,
+			"user": {
+				"name": "Ranko",
+				"surname": "Dacic",
+				"profilePicture": "profilna",
+				"telephoneNumber": "+38121521",
+				"email": "Ranko@gmail.com",
+				"address": "Cerska 14, Novi Sad"
+			},
+			"ride": {
+				"id": 22,
+				"startTime": "2022-01-29T20:17:44.973+00:00",
+				"endTime": "2022-01-29T20:18:15.120+00:00",
+				"totalCost": 554.33951202124396,
+				"driver": {
+					"id": 1234,
+					"email": "Ranko@gmail.com"
+				},
+				"passengers": [
+					{
+						"id": 122,
+						"email": "markopreradovic@gmail.com"
+					}
+				],
+				"estimatedTimeInMinutes": 54.534,
+				"vehicleType": "STANDARD",
+				"babyTransport": true,
+				"petTransport": true,
+				"rejection": {
+					"reason": "Prljav auto",
+					"timeOfRejection": "2022-01-29T20:17:44.973+00:00"
+				},
+				"locations": [
+					{
+						"departure": {
+							"address": "Radnicka 3, Novi Sad",
+							"latitude": 41.123,
+							"longitude": 11.2444
+						},
+						"destination": {
+							"address": "Radnicka 19, Novi Sad",
+							"latitude": 41.22222,
+							"longitude": 11.22222
+						}
+					}
+				]
+			},
+			"time": "2023-01-29T20:17:58.864+00:00",
+			"reason": "Lik ne cisti kola"
+		}
+		
+	]
+}

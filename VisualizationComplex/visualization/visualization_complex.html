@@ -1,0 +1,217 @@
+
+<style>
+
+    .node {
+      cursor: pointer;
+    }
+    
+    .link {
+      stroke: #173243;
+      stroke-width: 2px;
+    }
+
+    .container {
+      fill: rgb(243, 243, 243);
+      stroke: #25758d;
+      stroke-width: 2px;
+      /* border-radius: 10px; */
+    }
+
+    g {
+      margin: 0 auto;
+    }
+    
+</style>
+
+
+  <svg id="graph" style="
+        height: 100%;
+        margin: 0 auto;
+        display: block;
+        width:  100%;">
+  </svg>
+  
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  
+  
+  <script>
+    window.localStorage.clear();
+  
+    graph = {{graph|safe}}
+    nodes = {{nodes|safe}}
+    edges = {{edges|safe}}
+  
+    var nodesMap = {};
+    graph.nodes.forEach(function(d, i) {
+      nodesMap[d.name] = i;
+    });
+    graph.edges.forEach(function(d) {
+      d.source = nodesMap[d.source];
+      d.target = nodesMap[d.target];
+    });
+
+    var links = graph.edges;
+    var nodes = graph.nodes;
+
+    var svg = d3.select('#graph');
+
+    var width = svg.node().parentNode.clientWidth, height = svg.node().parentNode.clientHeight
+
+
+    var simulation = d3.forceSimulation(nodes)
+    .force('charge', d3.forceManyBody().strength(-30))
+    .force('center', d3.forceCenter(width / 2, height / 2))
+    .force('link', d3.forceLink().links(links).distance(350))
+    .on('tick', ticked);
+
+
+    function ticked() {
+      link
+        .attr("x1", d => d.source.x)
+        .attr("y1", d => d.source.y)
+        .attr("x2", d => d.target.x)
+        .attr("y2", d => d.target.y);
+      
+      node
+        .attr("transform", function(d) {
+                  return "translate(" + d.x + ", " + d.y + ")";
+            });
+
+    } 
+	
+    simulation.force('charge', d3.forceManyBody())
+
+    var g = d3.select('svg').append('g');
+
+    // defining graph edges
+    var link  = g.append('g')
+        .selectAll('line')
+        .data(links)
+        .enter()
+        .append('line')
+        .attr('class', 'link')
+        .attr('x1', function(d) { return d.source.x; })
+        .attr('y1', function(d) { return d.source.y; })
+        .attr('x2', function(d) { return d.target.x; })
+        .attr('y2', function(d) { return d.target.y; })
+        .join("line");
+
+      // defining graph nodes
+      var node = g.append("g").selectAll("g")
+                  .data(nodes).enter().append("g")
+            .attr("class", "node")
+            .call(d3.drag()
+            .on('start', dragStart)
+            .on('drag', dragging)
+            .on('end', dragEnd)
+          );
+      
+      // defining graph node style constants
+      var textSize = 12;
+      var nodeWidth = 200;
+      var nodeHeight = 100;
+      var padding = 10;
+
+      // node container
+      node.append("rect")
+              .attr('x',0)
+              .attr('y',0)
+              .attr('width', nodeWidth)
+              .attr('height', nodeHeight)
+              .attr("class", "container")
+              .attr("rx", 10)
+              .attr("ry", 10);
+
+      // node title/name
+      node.append("text")
+              .text(function(d) {return d.name})
+              .attr('x',200/2)
+              .attr('y', 15)
+              .attr('text-anchor','middle')
+              .attr('width', 100)
+              .attr('height', 100)
+              .attr("color", "black")
+              .attr('font-size',textSize+2)
+              .attr("font-weight", 700)
+              .attr('font-family','sans-serif');
+
+      // node title-attributes separator
+      node.append("line")
+              .attr('x1',0)
+              .attr('y1',textSize + padding)
+              .attr('x2',nodeWidth)
+              .attr('y2',textSize + padding)
+              .attr('stroke','#25758d')
+              .attr('stroke-width',2);
+      
+
+      node.append("g").selectAll(".attribute").data(function(d) {console.log(d.attributes.split(", "));return d.attributes.slice(1, -1).split(", ")}).enter()
+          .append("text")
+          .text(function(d) {return d})
+          .attr('x',nodeWidth/2)
+          .attr('y', function(d, i) {return 50+i*textSize})
+          .attr('text-anchor','middle')
+          .attr('width', 100)
+          .attr('height', 100)
+          .attr('line-height', textSize+8)
+          .attr('font-size', textSize+2)
+          .attr('color', 'black')
+          .attr("font-weight", 700)
+          .attr('font-family','sans-serif')
+          .attr("fill", "black") ;
+
+      // NE RADI
+      // d3.selectAll('.node').each(function(d){fillAttributes(d);});
+
+
+      // ZOOM option
+      var zoom = d3.zoom()
+          .on('zoom', function() {
+          g.attr('transform', d3.zoomTransform(this));
+          });
+
+      d3.select('svg').call(zoom);
+
+
+      // DRAG option (wip)
+      function dragStart(event, d) {
+        simulation.alphaTarget(0.2).restart();
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+
+      function dragging(event, d) {
+        d.fx = event.x;
+        d.fy = event.y;
+      }
+
+      function dragEnd(event, d) {
+        simulation.alphaTarget(0);
+        d.fx = null;
+        d.fy = null;
+
+      }
+
+      function fillAttributes(d) {
+        attributesNumber = d.attributes.length;
+
+        for(var i=0;i<attributesNumber;i++)
+              {
+                // Prikaz naziva kategorije
+                d3.select(d)
+                    .append('text')
+                    .attr('x',0)
+                    .attr('y',20+i*textSize)
+                    .attr('text-anchor','start')
+                    .attr('font-size',textSize)
+                    .attr('font-family','sans-serif')
+                    .attr('fill','green')
+                    .text(d.attributes[i]);
+              }
+        }
+</script>
+  
+  
+  
+  
+  

@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="container">
+  <div id="toolbar">
+    <form style="z-index: 1;">
+      <select id="plugins_parser" name="plugins_parser">
+        <option value="default">choose parser</option>
+        {% for pluginP in pluginsP %}
+        <option value="{{ pluginP.identifier }}">{{ pluginP.identifier }}</option>
+        {% endfor %}
+      </select>
+      <select id="plugins" name="plugins">
+        <option value="default">choose visualization</option>
+        {% for plugin in plugins %}
+        <option value="{{ plugin.identifier }}">{{ plugin.identifier }}</option>
+        {% endfor %}
+      </select>
+
+
+    </form>
+    <div id="options">
+      <select id="source_file" name="source_file">
+        <option value="default">choose source file</option>
+        {% for file in files %}
+        <option value="{{ file }}">{{ file }}</option>
+        {% endfor %}
+      </select>
+      <!-- <div id="source-file-import">
+        <i class="fa-solid fa-file"></i>
+        <p>import file</p> 
+      </div>  -->
+      <div id="search-filter">
+        <input id="query" type="text" name="query" placeholder="Query..." />
+        <div id="search_btn" onclick="searchGraph()">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div id="filter_btn" onclick="getVisualizationFiltered()">
+          <i class="fa-solid fa-filter"></i>
+        </div>
+      </div>
+      <button class="vis-btn" type="button" onclick="getVisualization()">VISUALIZE</button>
+    </div>
+
+  </div>
+
+
+
+  <div id="tree-view">
+
+  </div>
+
+  <div id="bird-view">
+    <div class="bv-display">
+      
+    </div>
+  </div>
+
+  <div id="graph-div" style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: red; */
+    ">
+
+  </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script>
+
+    function setBirdView(){
+      window.setInterval((function(){
+          let bird_view = document.querySelector(".bv-display");
+
+          // remove content if it has any
+          while(bird_view.firstChild){
+            bird_view.removeChild(bird_view.lastChild);
+          }
+
+          var mainSvg = document.getElementById("graph");
+ 
+          // deep clone it
+          var mainClonedSvg = mainSvg.cloneNode(true);
+
+          // remove all atributes from mainSvg and set new one
+          mainClonedSvg.removeAttribute("id");
+          mainClonedSvg.removeAttribute("class");
+                    
+          mainClonedSvg.setAttribute("id", "bird_view_svg");
+          mainClonedSvg.setAttribute("style",
+          "background-color:white;color:black;position:absolute;transform:scale(0.25);width:400%;height:400%;border:none");
+          bird_view.appendChild(mainClonedSvg);
+
+
+      }), 30);
+    }
+
+  function getVisualizationFiltered() {
+    clearALLL();
+    let select = document.getElementById("plugins");
+    let valueForId = select.options[select.selectedIndex].value;
+
+    const inputField = document.querySelector('input[name="query"]');
+    const inputValue = inputField.value;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "/visualizationChange/" + valueForId + "/" + inputValue, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        let response = xhr.responseText;
+        clearALLL();
+        $("#graph-div").html(response);
+
+        let xhrr = new XMLHttpRequest();
+              xhrr.open("GET", "/tree", true);
+              xhrr.onreadystatechange = function() {
+                if (xhrr.readyState === 4 && xhrr.status === 200) {
+                  let response = xhrr.responseText;
+                  d3.select('#tree-view').selectAll('*').remove();
+                  $("#tree-view").html(response);
+                }
+              };
+        xhrr.send();
+      }
+    };
+    xhr.send();
+  }
+
+  function getVisualization() {
+    clearALLL();
+      let select = document.getElementById("plugins");
+      let valueForId = select.options[select.selectedIndex].value;
+
+      let selectFile = document.getElementById("source_file");
+      let file = selectFile.options[selectFile.selectedIndex].value;
+
+      let parser = document.getElementById("plugins_parser");
+      let pluginValue = parser.options[parser.selectedIndex].value;
+
+      
+
+      console.log(file);
+      let parserXhl = new XMLHttpRequest();
+      parserXhl.open("GET", "/parser/"+pluginValue+ "/" + file, true);
+      parserXhl.onreadystatechange = function() {
+        if (parserXhl.readyState === 4 && parserXhl.status === 200) {
+          let response = parserXhl.responseText;
+
+              let xhr = new XMLHttpRequest();
+              xhr.open("GET", "/visualization/" + valueForId, true);
+              xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                  let response = xhr.responseText;
+                  clearALLL();
+                  $("#graph-div").html(response);
+                  setBirdView();
+                }
+              };
+              xhr.send();
+
+              let xhrr = new XMLHttpRequest();
+              xhrr.open("GET", "/tree", true);
+              xhrr.onreadystatechange = function() {
+                if (xhrr.readyState === 4 && xhrr.status === 200) {
+                  let response = xhrr.responseText;
+                  d3.select('#tree-view').selectAll('*').remove();
+                  $("#tree-view").html(response);
+                }
+              };
+              xhrr.send();
+
+        }
+      };
+      parserXhl.send();
+    
+}
+
+function clearALLL() {
+    g = null;
+    d3.select('#graph-div').selectAll('*').remove();
+    document.getElementById("graph-div").innerHTMLy = "";
+    console.log(g)
+  }
+
+  function searchGraph() {
+    clearALLL();
+    let select = document.getElementById("plugins");
+    let valueForId = select.options[select.selectedIndex].value;
+
+    const inputField = document.querySelector('input[name="query"]');
+    const inputValue = inputField.value;
+
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "/visualizationSearch/" + valueForId + "/" + inputValue, true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        let response = xhr.responseText;
+        clearALLL();
+        $("#graph-div").html(response);
+
+        let xhrr = new XMLHttpRequest();
+              xhrr.open("GET", "/tree", true);
+              xhrr.onreadystatechange = function() {
+                if (xhrr.readyState === 4 && xhrr.status === 200) {
+                  let response = xhrr.responseText;
+                  d3.select('#tree-view').selectAll('*').remove();
+                  $("#tree-view").html(response);
+                }
+              };
+        xhrr.send();
+      }
+    };
+    xhr.send();
+  }
+
+</script>
+
+{% endblock %}
